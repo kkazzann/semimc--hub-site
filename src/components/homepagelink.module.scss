@@ -1,0 +1,22 @@
+.homeLink {
+    text-decoration: none;
+    color: beige;
+    display: flex;
+    gap: 12px;
+
+    .internalIcon {
+        background: rgba(0, 0, 0, 0.62);
+        aspect-ratio: 1/1;
+        height: 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8px;
+    }
+
+    .linkContent {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+    }
+}

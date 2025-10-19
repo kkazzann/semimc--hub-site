@@ -1,0 +1,219 @@
+/* --- Global Imports --- */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
+
+/* --- Base Container --- */
+.discordWidgetContainer {
+    border-radius: 24px;
+    padding: 16px 24px;
+    width: 100%;
+    max-width: 780px;
+    min-width: 288px;
+    margin: 18px auto;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    color: rgba(255, 255, 255, 0.9);
+    background: #5865f2;
+    border: 2px solid rgb(88, 101, 242, 0.25);
+    border-radius: 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    margin-top: 16px;
+
+    &.error {
+        text-align: center;
+        color: rgba(255, 255, 255, 0.75);
+    }
+}
+
+/* --- Widget Header --- */
+.widgetHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.serverName {
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.joinButton {
+    background-color: #000000;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+}
+
+/* --- Members Section --- */
+.onlineHeader {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.memberList {
+    display: flex;
+    overflow-x: scroll;
+    white-space: nowrap; /* Prevents items from wrapping to the next line */
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* For IE, Edge, and Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+.memberItem {
+    display: flex;
+    align-items: center;
+
+    &:not(:first-child) {
+        margin-left: -12px;
+    }
+}
+
+.memberAvatar {
+    overflow: visible;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 8px solid #5865f2;
+    position: relative;
+    flex-shrink: 0;
+
+    img {
+        box-shadow: -6px 0px 4px 0px #00000036;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+    }
+}
+
+/* --- Status Indicators --- */
+.statusDot {
+    display: none;
+    z-index: 2;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+    border: 2px solid #1b1b1b;
+}
+
+.statusOnline {
+    background-color: #3ba55d;
+}
+.statusIdle {
+    background-color: #faa61a;
+}
+.statusDnd {
+    background-color: #ed4245;
+}
+
+.memberName {
+    font-size: 15px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* --- Skeleton Loader --- */
+.discordSkeleton {
+    background-color: #1b1b1b;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 8px;
+    padding: 16px;
+    width: 100%;
+    max-width: 350px;
+    min-height: 250px;
+    font-family: "Inter", sans-serif;
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+    0%,
+    100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.6;
+    }
+}
+
+.skeletonHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.skeletonTitle {
+    width: 60%;
+    height: 24px;
+    background-color: rgba(255, 255, 255, 0.12);
+    border-radius: 4px;
+}
+
+.skeletonButton {
+    width: 30%;
+    height: 36px;
+    background-color: #fe2c55;
+    opacity: 0.5;
+    border-radius: 4px;
+}
+
+.skeletonMember {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.skeletonAvatar {
+    width: 32px;
+    height: 32px;
+    background-color: rgba(255, 255, 255, 0.12);
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+.skeletonName {
+    width: 50%;
+    height: 16px;
+    background-color: rgba(255, 255, 255, 0.12);
+    border-radius: 4px;
+}
+
+.status-idle {
+    background: #fca41e;
+}
+
+.status-dnd {
+    background: #eb4247;
+}
+
+.status-online {
+    background: #439e63;
+}
+
+@media (max-width: 1250px) {
+    .memberList {
+        display: none;
+    }
+
+    .widgetHeader {
+        margin-bottom: 0;
+    }
+}

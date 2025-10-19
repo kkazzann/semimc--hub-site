@@ -1,0 +1,39 @@
+.linkWrapper {
+    color: beige;
+    text-decoration: none;
+    overflow: visible;
+
+    .linkCard {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 16px 24px;
+        border-radius: 24px;
+        align-items: center;
+        border: 2px solid rgba(61, 0, 50, 0.75);
+        background: rgba(61, 0, 50, 0.45);
+        color: beige;
+        text-decoration: none;
+        transition: 0.5s all;
+        overflow: visible;
+
+        &.featured-discord {
+            background-color: rgb(88, 101, 242, .45);
+            border-color: rgb(88,101,242, .75);
+        }
+
+        &.featured-shop {
+            border-color: rgba(255, 93, 23, 0.75);
+            background-color: rgba(255, 88, 33, 0.45);
+        }
+
+        .linkContent {
+            gap: 8px;
+            display: flex;
+        }
+
+        &:hover {
+            scale: 1.15;
+        }
+    }
+}
